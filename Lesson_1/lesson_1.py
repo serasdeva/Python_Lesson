@@ -89,6 +89,4 @@ def fun2D(x1, y1, x2, y2):
     distance = f'{(((x2 - x1)**2) + ((y2 - y1)**2))**0.5:.3f}'
     return distance
 
-
-
-
+print(fun2D(-3, -6, -2, -1))
