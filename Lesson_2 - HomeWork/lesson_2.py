@@ -28,4 +28,20 @@ def sum_float_number():
     print(f'Сумма цифр данного числа {input_nimber} равна ', '->', sum)
 
 
-sum_float_number()
+#Вызов функции к первой задаче
+#sum_float_number()
+
+#----------------------------------------------------------------------------------------------------
+
+#2. Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
+
+number_N = int(input('Введите число --> '))
+
+start_value = 1
+list_nums = []
+
+for i in range(1, number_N + 1):
+    start_value *= i
+    list_nums.append(start_value)
+
+print(number_N, '->', list_nums)
