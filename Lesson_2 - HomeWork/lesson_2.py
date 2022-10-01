@@ -70,4 +70,5 @@ def sum_list_nums():
 
     print(list_nums, sum)
 
+#Вызов функции к третьей задаче
 sum_list_nums()
