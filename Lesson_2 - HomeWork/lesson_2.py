@@ -4,6 +4,9 @@
 # - 0.67 -> 13
 # - 198.45 -> 27
 
+from random import random
+
+
 def sum_float_number():
     input_number = float(input('Введите вещественное число --> '))
     number = input_number
@@ -74,7 +77,7 @@ def sum_list_nums():
 # sum_list_nums()
 
 
-# 4. Напишите программу, которая принимает на вход 2 числа. Задайте список из N элементов, заполненных числами из промежутка [-N, N]. Найдите произведение элементов на указанных позициях(не индексах).
+# 4. * Напишите программу, которая принимает на вход 2 числа. Задайте список из N элементов, заполненных числами из промежутка [-N, N]. Найдите произведение элементов на указанных позициях(не индексах).
 # Position one: 1
 # Position two: 3
 # Number of elements: 5
@@ -97,4 +100,33 @@ def two_element():
 
 
 # Вызов функции к четвертой задаче со звездочкой
-two_element()
+# two_element()
+
+# 5. ** Реализуйте алгоритм перемешивания списка. Без функции shuffle из модуля random.
+
+def fill_unsorted_list():
+    number = int(input('Введите длину списка: '))
+    unmixed_list = []
+    if number > 0:
+        for i in range(number):
+            unmixed_list.append(i)
+    elif number < 0:
+        for i in range(number+1, 1):
+            unmixed_list.append(i)
+
+    print('Неперемешанный -> ', unmixed_list)
+    return unmixed_list
+
+
+def my_random(unmixed_list):
+    from random import randint as rand
+
+    len_unsorted_list = len(unmixed_list)
+    for i in range(len_unsorted_list):
+        randomer = rand(0, len_unsorted_list-1)
+        unmixed_list[i], unmixed_list[randomer] = unmixed_list[randomer], unmixed_list[i]
+
+    print('Перемешанный список -> ', unmixed_list)
+
+
+my_random(fill_unsorted_list())
