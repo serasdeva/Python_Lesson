@@ -117,4 +117,4 @@ def search_amount():
     print(f'{list} \n Min: {min}, Max: {max} Difference: {result}')
 
 
-search_amount()
+#search_amount()
